@@ -107,12 +107,26 @@
     display: flex;
     justify-content: space-between;
 
+	@media @mobile {
+		.flex(column nowrap, center, center)
+	}
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+	  @media @mobile {
+		  width: 80%;
+	  }
+
 	  .btn {
-		.button(80%, teal, white);
+		.button(80%, @button-bg, white, 5%);
+
+		@media @mobile {
+			.button(100%, @button-bg, white, 3%);
+			font-size: 1.5rem;
+			border-radius: 1rem;
+		}
 	  }
     }
   }
